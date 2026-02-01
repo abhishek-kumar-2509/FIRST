@@ -5,9 +5,16 @@ public class CountEvenNum {
         Scanner abc = new Scanner(System.in);
         System.out.print("Enter number: ");
         int n = abc.nextInt();
-        while(n>0){
-        int d = n % 10;
+        int count = 0;
         
+        while(n > 0){
+        int d = n % 10;
+            if(d % 2 == 0){
+                count++;
+            }
+        n = n / 10;
         }
+        System.out.println("Number of Even Number = " + count);
+        abc.close();
     }
 }
